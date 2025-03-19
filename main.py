@@ -13,7 +13,7 @@ from transformers import pipeline
 app = FastAPI()
 
 # Configuration du logging pour debug
-logging.basicConfig(level=logging.INFO)
+logging.getLogger().setLevel(logging.INFO)
 
 # Gestion des templates pour la page d'accueil
 templates = Jinja2Templates(directory="templates")
